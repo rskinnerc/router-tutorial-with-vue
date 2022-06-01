@@ -12,6 +12,8 @@
         </RouterLink>
       </nav>
     </div>
+    <RouterView />
+
   </main>
 </template>
 
