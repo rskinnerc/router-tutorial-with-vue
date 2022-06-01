@@ -9,18 +9,20 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      children: [
+        {
+          path: '/expenses',
+          name: 'expenses',
+          component: Expenses
+        },
+        {
+          path: '/invoices',
+          name: 'invoices',
+          component: Invoices
+        }
+      ]
     },
-    {
-      path: '/expenses',
-      name: 'expenses',
-      component: Expenses
-    },
-    {
-      path: '/invoices',
-      name: 'invoices',
-      component: Invoices
-    }
   ]
 })
 
