@@ -4,6 +4,7 @@ import Expenses from '../views/Expenses.vue'
 import Invoices from '../views/Invoices.vue'
 import NotFound from '../views/NotFound.vue'
 import Invoice from '../views/Invoice.vue'
+import InvoicesHome from '../views/InvoicesHome.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
           name: 'invoices',
           component: Invoices,
           children: [
+            {
+              path: '',
+              name: 'invoices-home',
+              component: InvoicesHome
+            },
             {
               path: ':invoiceId',
               component: Invoice,
